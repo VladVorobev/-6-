@@ -1,0 +1,61 @@
+﻿<Window x:Class="Модуль_6_Воробьёв.BookRentalForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Аренда книг" Height="566" Width="600">
+    <Grid>
+        <!-- Контейнер для элементов управления, выравнивание по вертикали -->
+        <StackPanel VerticalAlignment="Top" Margin="10">
+
+            <!-- Метка для названия книги -->
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Название книги:" Width="120" Height="30"/>
+                <TextBox Name="TitleTextBox" Width="400" Height="30"/>
+            </StackPanel>
+
+            <!-- Метка для автора книги -->
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Автор книги:" Width="120" Height="30"/>
+                <TextBox Name="AuthorTextBox" Width="400" Height="30"/>
+            </StackPanel>
+
+            <!-- Метка для жанра книги -->
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Жанр книги:" Width="120" Height="30"/>
+                <TextBox Name="GenreTextBox" Width="400" Height="30"/>
+            </StackPanel>
+
+            <!-- Кнопка для добавления книги -->
+            <Button Name="AddBookButton" Content="Добавить книгу" Width="150" Height="30" Margin="0,10,0,0" Click="AddBookButton_Click"/>
+
+            <!-- Метка для поиска книг -->
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Поиск книги (автор, жанр или название):" Width="120" Height="30" TextWrapping="Wrap"/>
+                <TextBox Name="SearchTextBox" Width="400" Height="30"/>
+            </StackPanel>
+
+            <!-- Кнопка для поиска книг -->
+            <Button Name="SearchButton" Content="Поиск" Width="150" Height="30" Margin="0,10,0,0" Click="SearchButton_Click"/>
+
+            <!-- DataGrid для отображения книг -->
+            <DataGrid Name="BooksDataGrid" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" Width="560" Height="200" Margin="0,10,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Название книги" Binding="{Binding Title}" Width="*"/>
+                    <DataGridTextColumn Header="Автор" Binding="{Binding Author}" Width="*"/>
+                    <DataGridTextColumn Header="Жанр" Binding="{Binding Genre}" Width="*"/>
+                    <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Кнопка для аренды книги -->
+            <Button Name="RentButton" Content="Арендовать книгу" Width="130" Height="30" Margin="0,10,0,0" Click="RentButton_Click"/>
+
+            <!-- Кнопка для возврата книги -->
+            <Button Name="ReturnButton" Content="Вернуть книгу" Width="150" Height="30" Margin="0,10,0,0" Click="ReturnButton_Click"/>
+
+        </StackPanel>
+
+        <!-- Кнопка для перехода на финансы, размещена в правом верхнем углу -->
+        <Button Name="FinanceButton" Content="Учет финансов" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,139,70,0" Click="FinanceButton_Click"/>
+
+    </Grid>
+</Window>

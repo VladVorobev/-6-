@@ -1,0 +1,80 @@
+﻿<Window x:Class="Модуль_6_Воробьёв.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Модуль_6_Воробьёв"
+        mc:Ignorable="d"
+        Title="Учет сотрудников" Height="550" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Ввод данных сотрудника -->
+        <Grid Grid.Row="0" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- ФИО -->
+            <TextBlock Text="ФИО:" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="5"/>
+            <TextBox Name="FullNameTextBox" Grid.Row="0" Grid.Column="1" Width="300" Margin="5"/>
+
+            <!-- Возраст -->
+            <TextBlock Text="Возраст:" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="5"/>
+            <TextBox Name="AgeTextBox" Grid.Row="1" Grid.Column="1" Width="50" Margin="5"/>
+
+            <!-- Дата рождения -->
+            <TextBlock Text="Дата рождения:" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Margin="5"/>
+            <DatePicker Name="BirthDatePicker" Grid.Row="2" Grid.Column="1" Width="150" Margin="5"/>
+
+            <!-- Должность -->
+            <TextBlock Text="Должность:" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Margin="5"/>
+            <TextBox Name="PositionTextBox" Grid.Row="3" Grid.Column="1" Width="200" Margin="5"/>
+
+            <!-- Адрес -->
+            <TextBlock Text="Адрес:" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Margin="5"/>
+            <TextBox Name="AddressTextBox" Grid.Row="4" Grid.Column="1" Width="300" Margin="5"/>
+
+            <!-- Номер телефона -->
+            <TextBlock Text="Телефон:" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Margin="5"/>
+            <TextBox Name="PhoneNumberTextBox" Grid.Row="5" Grid.Column="1" Width="150" Margin="5"/>
+
+            <!-- Кнопки для операций -->
+            <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="5,10,0,0">
+                <Button Name="AddButton" Content="Добавить" Width="80" Margin="5" Click="AddButton_Click"/>
+                <Button Name="DeleteButton" Content="Удалить" Width="80" Margin="5" Click="DeleteButton_Click"/>
+            </StackPanel>
+
+            <!-- Кнопка для перехода к TaskManagementForm -->
+            <Button Name="GoToTaskFormButton" Content="Перейти к задачам" Width="150" Height="30" Grid.Row="7" Grid.Column="1" Margin="5,10,0,0" Click="GoToTaskFormButton_Click"/>
+        </Grid>
+
+        <!-- Таблица для отображения сотрудников -->
+        <DataGrid Name="EmployeesDataGrid" Grid.Row="1" AutoGenerateColumns="False" Margin="10"
+          CanUserAddRows="False" IsReadOnly="False" SelectionMode="Single"
+          CellEditEnding="EmployeesDataGrid_CellEditEnding">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}" Width="200" IsReadOnly="False"/>
+                <DataGridTextColumn Header="Возраст" Binding="{Binding Age}" Width="100" IsReadOnly="False"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding BirthDate}" Width="150" IsReadOnly="False"/>
+                <DataGridTextColumn Header="Должность" Binding="{Binding Position}" Width="150" IsReadOnly="False"/>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Address}" Width="200" IsReadOnly="False"/>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding PhoneNumber}" Width="150" IsReadOnly="False"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

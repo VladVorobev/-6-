@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Модуль 6 Воробьёв", "Модуль 6 Воробьёв\Модуль 6 Воробьёв.csproj", "{A31ED4C1-24C0-4C15-B35B-0C5488E9039A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A31ED4C1-24C0-4C15-B35B-0C5488E9039A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31ED4C1-24C0-4C15-B35B-0C5488E9039A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31ED4C1-24C0-4C15-B35B-0C5488E9039A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31ED4C1-24C0-4C15-B35B-0C5488E9039A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {358FA7E9-42A3-42F6-A82C-88975F0E186A}
+	EndGlobalSection
+EndGlobal

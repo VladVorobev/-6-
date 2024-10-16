@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Модуль_6_Воробьёв.BookRentalForm" BaseTypeListCollapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Модуль_6_Воробьёв.BookRentalForm.Book" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BookRentalForm.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgBAAAAAAAAQAAhAEAFAAgAEAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>BookRentalForm.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Модуль_6_Воробьёв.FinancialRecordForm" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAIgAAAAAAAgAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FinancialRecordForm.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Модуль_6_Воробьёв.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Модуль_6_Воробьёв.MainWindow.Employee" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainWindow.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAgQQAACAAAAAAIAAAEAAAABCAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Модуль_6_Воробьёв.TaskManagementForm" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Модуль_6_Воробьёв.TaskManagementForm.Task" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TaskManagmentForm.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAQAFUACAACgAAAACAAAAABA=</HashCode>
+      <FileName>TaskManagmentForm.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Модуль_6_Воробьёв.Properties.Resources">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Модуль_6_Воробьёв.Properties.Settings">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

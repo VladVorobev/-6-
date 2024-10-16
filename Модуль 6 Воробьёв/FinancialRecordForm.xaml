@@ -1,0 +1,52 @@
+﻿<Window x:Class="Модуль_6_Воробьёв.FinancialRecordForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Учет финансов" Height="500" Width="600">
+    <Grid>
+        <!-- Сетка для выравнивания элементов -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- Дата -->
+            <RowDefinition Height="Auto" />
+            <!-- Поле для даты -->
+            <RowDefinition Height="Auto" />
+            <!-- Тип операции -->
+            <RowDefinition Height="Auto" />
+            <!-- Поле для типа операции -->
+            <RowDefinition Height="Auto" />
+            <!-- Сумма -->
+            <RowDefinition Height="Auto" />
+            <!-- Поле для суммы -->
+            <RowDefinition Height="Auto" />
+            <!-- Описание -->
+            <RowDefinition Height="Auto" />
+            <!-- Поле для описания -->
+            <RowDefinition Height="Auto" />
+            <!-- Кнопка для сохранения -->
+            <RowDefinition Height="Auto" />
+            <!-- Для отображения данных -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Текстовые метки -->
+        <TextBlock Text="Дата" VerticalAlignment="Center" Margin="10" Grid.Row="0"/>
+        <TextBlock Text="Тип операции" VerticalAlignment="Top" Margin="10,12,10,0" Grid.Row="1" Grid.RowSpan="2"/>
+        <TextBlock Text="Сумма" VerticalAlignment="Center" Margin="10" Grid.Row="4"/>
+        <TextBlock Text="Описание" VerticalAlignment="Top" Margin="10,10,10,0" Grid.Row="7"/>
+
+        <!-- Элементы для ввода данных -->
+        <DatePicker Name="DatePicker" Width="200" Height="30" Margin="150,18,150,38" Grid.RowSpan="2"/>
+        <ComboBox Name="TypeComboBox" Width="200" Height="30" Margin="150,7,150,0" Grid.Row="1">
+            <ComboBoxItem Content="Доход" />
+            <ComboBoxItem Content="Расход" />
+        </ComboBox>
+        <TextBox Name="AmountTextBox" Width="200" Height="30" Margin="150,13,150,10" Grid.Row="4"/>
+        <TextBox Name="DescriptionTextBox" Width="200" Height="60" Margin="150,0,150,0" Grid.Row="7"/>
+
+        <!-- Кнопка сохранения -->
+        <Button Name="SaveButton" Content="Сохранить запись" Width="150" Height="30" Margin="10" Grid.Row="8" Click="SaveButton_Click"/>
+
+        <!-- DataGrid для отображения финансовых записей -->
+        <DataGrid Name="FinancialRecordsDataGrid" Width="500" Height="200" Margin="50,10,50,10" Grid.Row="9" AutoGenerateColumns="True" />
+    </Grid>
+</Window>
